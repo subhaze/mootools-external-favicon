@@ -3,7 +3,7 @@ Element.getFavicons
 
 Goes out and grabs a site's favicon and adds it to the left of the external link.
 
-![Screenshot](http://github.com/subhaze/mootools-element-highlight/raw/master/logo.png)
+![Screenshot](http://github.com/subhaze/mootools-external-favicon/raw/master/logo.png)
 
 How to use
 ----------
