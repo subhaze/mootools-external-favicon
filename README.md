@@ -1,9 +1,11 @@
 Element.getFavicons
 ===========
 
+Update:
+This plugin is now Packager compatible and will now look in the subdomain root dir if the external link points to a link with a subdomain.
+
 Goes out and grabs a site's favicon and adds it to the left of the external link.
-As of now this plugin will only get the favicon IF it is located at the root folder of the site and does not take into consideration favicons for subdomains.
-I plan on updating this in the near future so that it will also check for subdomains as well.
+As of now this plugin will only get the favicon IF it is located at the root folder AND is using the standard naming convention "favicon"
 
 ![Screenshot](http://github.com/subhaze/mootools-external-favicon/raw/master/logo.png)
 
