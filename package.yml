@@ -10,7 +10,7 @@ tags: "[navigation]"
 
 demo: "http://mootools.net/shell/CmHTr/11/"
 
-current: "v1.1"
+current: "v1.2"
 
 sources:
   - "Source/Mootools-External-Favicon.js"

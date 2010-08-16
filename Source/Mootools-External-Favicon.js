@@ -27,7 +27,10 @@ Element.implement({
     var externalLinks = this.getElements( 'a[href^="http://"]' );
     var imgTypes = imgExtensions || ['ico', 'png', 'gif', 'bmp'];
     
+    
     externalLinks.each( function( a ) {
+      
+      var alternateLink = $(a).get('class').match(/favicon\[(.+)\]/);
       
       var uri = new URI( a );
       
@@ -50,7 +53,11 @@ Element.implement({
         }
       }
       
-      
+      if( alternateLink ) {
+        
+        $(a).setStyle( 'background-image', 'url(' + alternateLink[1] +')' );
+        return;
+      }
       (
         function( i ){
           
