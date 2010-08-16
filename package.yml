@@ -1,6 +1,16 @@
-name: External Favicon
-author: subhaze
-category: Interface
-tags: [navigation]
-demo: http://mootools.net/shell/CmHTr/11/
-current: v1.0
+name: "ExternalFavicon"
+
+exports: "ExternalFavicon.js"
+
+author: "subhaze"
+
+category: "Interface"
+
+tags: "[navigation]"
+
+demo: "http://mootools.net/shell/CmHTr/11/"
+
+current: "v1.1"
+
+sources:
+  - "Source/Mootools-External-Favicon.js"

@@ -12,14 +12,18 @@ How to use
 
 JavaScript
 
-	// You can specify a specific element or point to the body to get all external favicons on page
+	// You can execute from the body to get all external favicons on the page.
 	$(document.body).getFavicons();
 	
-	// You may add your own custom class to override the default style settings
+	// You may add your own custom class to override the positioning of the favicon.
 	$(document.body).getFavicons( 'className' );
+	
+	//You may add an array of image extension that you wish to check for from external sites
+	//As of now it will try to find ico, bmp, gif, png files.
+	$(document.body).getFavicons( null, ['png','ico'] );
 	
 HTML
 
-	<a class="link" href="http://www.google.com"></a><br />
-	<a class="link" href="http://www.flickr.com"></a><br />
-	<a class="link" href="http://www.twitter.com"></a>
+	<a href="http://www.google.com"></a><br />
+	<a href="http://www.flickr.com"></a><br />
+	<a href="http://www.twitter.com"></a>
