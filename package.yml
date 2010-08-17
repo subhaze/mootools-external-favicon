@@ -8,9 +8,9 @@ category: "Interface"
 
 tags: "[navigation]"
 
-demo: "http://mootools.net/shell/CmHTr/40/"
+demo: "http://mootools.net/shell/CmHTr/41/"
 
-current: "v1.2.1"
+current: "v1.3"
 
 sources:
   - "Source/Mootools-External-Favicon.js"

@@ -1,6 +1,9 @@
 Element.getFavicons
 ===========
 
+Update 3:
+Now checks for https external links as well.
+
 Update 2:
 You can now specify a specific location to look for a favicon per link, via a class naming convention: favicon[http://full.path.to/the/image.png].
 
