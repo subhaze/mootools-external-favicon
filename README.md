@@ -39,3 +39,11 @@ HTML
 	<!-- overriding the default favicon location and naming conventions -->
 	
 	<a class="favicon[http://github.com/subhaze/mootools-external-favicon/raw/master/me.png]" href="http://github.com/subhaze">github.com/subhaze</a>
+	
+CSS
+	
+	/* Styles applied to the link tags unless a class name is passed in */
+	
+	padding:					{ 5px 0 6px 25px }
+	background-position:	{ 3px 50% }
+	background-repeat:	{ no-repeat }

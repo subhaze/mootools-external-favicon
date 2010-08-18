@@ -28,20 +28,22 @@ Element.implement({
         imgTypes = imgExtensions || ['ico', 'png', 'gif', 'bmp'];
     
     externalLinks.each( function( a ) {
-      
       var alternateLink = $(a).get('class').match(/favicon\[(.+)\]/),
           uri = new URI( a );
+          
       if( baseHost != uri.get( 'host' ) ) {
-        var domain = uri.get('scheme')+'://' + uri.get('host'),
-            favicon = new URI( '/favicon.ico', {base: domain});
-        if( className ) { a.addClass( className ) }
-        else {
+        var domain = uri.get('scheme')+'://' + uri.get('host');
+            
+        if( className ) {
+          a.addClass( className )
+        } else {
           a.setStyles({
             'background-repeat':    'no-repeat',
             'background-position':  '3px 50%',
             'padding':              '5px 0 6px 25px'
           });
         }
+        
       }
       
       if( alternateLink ){
@@ -50,14 +52,16 @@ Element.implement({
       }
         
       (function( i ){
+          var args = arguments,
+              favLink;
           
-          var args = arguments;
           if( i >= imgTypes.length ) return;
-          favicon = new URI( '/favicon.'+imgTypes[i], {base: domain} );
           
-          Asset.image( favicon, {
-            onload: function() { a.setStyle( 'background-image', 'url(' + favicon + ')') },
-            onerror: function() { args.callee( ++i ) }
+          favLink = domain +'/favicon.'+ imgTypes[i];
+          
+          Asset.image( favLink, {
+            onload:   function() { a.setStyle( 'background-image', 'url(' + favLink + ')'); },
+            onerror:  function() { args.callee( ++i ) }
           });
         }
       )(0)
