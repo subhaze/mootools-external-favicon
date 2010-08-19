@@ -20,6 +20,7 @@ How to use
 
 JavaScript
 
+	#JS
 	// You can execute from the body to get all external favicons on the page.
 	$(document.body).getFavicons();
 	
@@ -32,6 +33,7 @@ JavaScript
 	
 HTML
 
+	#HTML
 	<a href="http://www.google.com"></a><br />
 	<a href="http://www.flickr.com"></a><br />
 	<a href="http://www.twitter.com"></a><br />
@@ -42,6 +44,7 @@ HTML
 	
 CSS
 	
+	#CSS
 	/* Styles applied to the link tags unless a class name is passed in */
 	
 	padding:					{ 5px 0 6px 25px }
