@@ -6,11 +6,11 @@ author: "subhaze"
 
 category: "Interface"
 
-tags: "[navigation]"
+tags: "[navigation, interface]"
 
-demo: "http://mootools.net/shell/CmHTr/41/"
+demo: ""
 
-current: "v1.3"
+current: "v1.4"
 
 sources:
   - "Source/Mootools-External-Favicon.js"

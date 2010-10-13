@@ -21,11 +21,12 @@ authors: [Michael Russell]
 
 Element.implement({
   
-  getFavicons: function( className, imgExtensions ) {
+  getFavicons: function( dimensions, className, imgExtensions ) {
     
     var baseHost = URI.base.get('host'),
         externalLinks = this.getElements( 'a[href^="http://"], a[href^="https://"]' ),
-        imgTypes = imgExtensions || ['ico', 'png', 'gif', 'bmp'];
+        imgTypes = imgExtensions || ['ico', 'png', 'gif', 'bmp'],
+        _dimensions = {'width':16,'height':16};
     
     externalLinks.each( function( a ) {
       var alternateLink = $(a).get('class').match(/favicon\[(.+)\]/),
@@ -40,14 +41,19 @@ Element.implement({
           a.setStyles({
             'background-repeat':    'no-repeat',
             'background-position':  '3px 50%',
-            'padding':              '5px 0 6px 25px'
+            'padding':              '5px 0 6px 0px'
           });
         }
         
       }
       
       if( alternateLink ){
-        $(a).setStyle( 'background-image', 'url(' + alternateLink[1] +')' );
+        new Element( 'img', {
+            'width': _dimensions.width,
+            'height': _dimensions.height,
+            'src': alternateLink[1],
+            'styles':{'margin-right':'5px'}
+        }).inject($(a), 'top'); //.setStyle( 'background-image', 'url(' + alternateLink[1] +')' );
         return;
       }
         
@@ -60,8 +66,10 @@ Element.implement({
           favLink = domain +'/favicon.'+ imgTypes[i];
           
           Asset.image( favLink, {
-            onload:   function() { a.setStyle( 'background-image', 'url(' + favLink + ')'); },
-            onerror:  function() { args.callee( ++i ) }
+            onload:   function() {
+                new Element('img', {'width':_dimensions.width, 'height':_dimensions.height, 'src':favLink, 'styles':{'margin-right':'5px'} } ).inject(a,'top');
+                /*a.setStyle( 'background-image', 'url(' + favLink + ')');*/ },
+            onerror:  function() { args.callee( ++i, dim ) }
           });
         }
       )(0)
