@@ -8,9 +8,9 @@ category: "Interface"
 
 tags: "[navigation, interface]"
 
-demo: ""
+demo: "http://jsfiddle.net/FZkbt/"
 
-current: "v1.4b"
+current: "v1.4"
 
 sources:
   - "Source/Mootools-External-Favicon.js"
