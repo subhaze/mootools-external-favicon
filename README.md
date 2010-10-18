@@ -37,7 +37,7 @@ JavaScript
 
 	// *Note* If you add a space at the end of the class name you can apply it as another class instead
 	// of a prefix to the internal class name
-	$(document.body).getFavicons('newClass');
+	$(document.body).getFavicons('newClass ');
 	// result would be: <span class="newClass favicon-wrapper"/>, <img class="newClass favicon-img"/>
 
 	//You can add an array of image extensions that you wish to check for from external sites
