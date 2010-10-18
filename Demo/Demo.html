@@ -1,26 +1,79 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
-   "http://www.w3.org/TR/html4/strict.dtd">
+    "http://www.w3.org/TR/html4/strict.dtd">
 
 <html lang="en">
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>External-Favicon-Demo</title>
+    <script type="text/javascript" src="mootools-1.2.4-core-nc.js"></script>
+    <script type="text/javascript" src="mootools-1.2.4.4-more.js"></script>
+    <script type="text/javascript" src="../Source/Mootools-External-Favicon.js"></script>
+    <script type="text/javascript">
+        window.addEvent( 'domready', function() {
+            $('set1').getFavicons();// uses default class names
+            $('set2').getFavicons('medium-sized '); //space at end adds new class instead of prefix to class name
+            $('set3').getFavicons('large-'); //no space adds prefix to default class names
+        });
+    </script>
+    <style type="text/css">
+        h6{
+            margin:20px 0 0 0;
+            padding:0;
+        }
 
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>External-Favicon-Demo</title>
-	<script type="text/javascript" src="mootools-1.2.4-core-nc.js"></script>
-	<script type="text/javascript" src="mootools-1.2.4.4-more.js"></script>
-	<script type="text/javascript" src="../Source/Mootools-External-Favicon.js"></script>
-	<script type="text/javascript">
-	window.addEvent( 'domready', function() {
-	  $(document.body).getFavicons();
-	});
 
-	</script>
+        .favicon-img {
+            height:16px;
+            margin-right:4px;
+            position:relative;
+            top:4px;
+            width:16px;
+        }
+
+        #set2 a{
+            font-size:22px;
+        }
+        .medium-sized{
+            height:24px;
+            width:24px;
+        }
+
+        #set3 a{
+            font-size:26px;
+        }
+        .large-favicon-img {
+            height:32px;
+            margin-right:10px;
+            position:relative;
+            top:4px;
+            width:32px;
+        }
+    </style>
 </head>
 <body>
-  <a href="https://www.google.com/accounts/Login?hl=en&continue=http://www.google.com/">google login</a><br />
-  <a href="http://maps.google.com">maps.google</a>
-  <a href="http://www.flickr.com">flikr</a>
-  <a href="http://twitter.com">twitter</a><br />
-  <a class="someClass another favicon[http://github.com/subhaze/mootools-external-favicon/raw/master/me.png]" href="http://github.com/subhaze">github.com/subhaze</a>
+    <div id="set1">
+        <h6>Small 16 x 16</h6>
+        <a href="http://www.google.com">google.com</a><br />
+        <a href="http://www.flickr.com">flickr.com</a><br />
+        <a href="http://www.twitter.com">twitter.com</a><br />
+        <!-- overriding the default behavior by applying a specific location to get the favicon from -->
+        <a class="favicon[http://github.com/subhaze/mootools-external-favicon/raw/master/me.png]" href="http://github.com/subhaze">github.com/subhaze</a>
+    </div>
+    <div id="set2">
+        <h6>Medium 24 x 24</h6>
+        <a href="http://www.google.com">google.com</a><br />
+        <a href="http://www.flickr.com">flickr.com</a><br />
+        <a href="http://www.twitter.com">twitter.com</a><br />
+        <!-- overriding the default behavior by applying a specific location to get the favicon from -->
+        <a class="favicon[http://github.com/subhaze/mootools-external-favicon/raw/master/me.png]" href="http://github.com/subhaze">github.com/subhaze</a>
+    </div>
+    <div id="set3">
+        <h6>Large 32 x 32</h6>
+        <a href="http://www.google.com">google.com</a><br />
+        <a href="http://www.flickr.com">flickr.com</a><br />
+        <a href="http://www.twitter.com">twitter.com</a><br />
+        <!-- overriding the default behavior by applying a specific location to get the favicon from -->
+        <a class="favicon[http://github.com/subhaze/mootools-external-favicon/raw/master/me.png]" href="http://github.com/subhaze">github.com/subhaze</a>
+    </div>
 </body>
 </html>

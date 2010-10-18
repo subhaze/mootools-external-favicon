@@ -10,7 +10,7 @@ tags: "[navigation, interface]"
 
 demo: ""
 
-current: "v1.4"
+current: "v1.4b"
 
 sources:
   - "Source/Mootools-External-Favicon.js"
