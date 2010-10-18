@@ -2,10 +2,10 @@ Element.getFavicons
 ===========
 
 Update 4:
-Ability to specify the favicon image size. I've changed the way the favicon is displayed, it used to be set as the <a> background image
+Ability to specify the favicon image size. I've changed the way the favicon is displayed, it used to be set as the '<a>' background image
 but now that I'm seeing sites (ex. twitter) using larger favicons I felt that using an actual image tag would be best in order to keep all
-favicon images the same size. So now instead of applying the favicon to the <a> background the <a> is wrapped in a span tag and the image
-is injected into this span with the <a> allowing you to set a specific size of the image via CSS.
+favicon images the same size. So now instead of applying the favicon to the '<a>' background the '<a>' is wrapped in a span tag and the image
+is injected into this span with the '<a>' allowing you to set a specific size of the image via CSS.
 
 Update 3:
 Now checks for https external links as well.
