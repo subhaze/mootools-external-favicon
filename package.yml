@@ -10,7 +10,7 @@ tags: "[navigation, interface]"
 
 demo: "http://www.jsfiddle.net/subhaze/hz9x2/"
 
-current: "v1.4"
+current: "v1.5"
 
 sources:
   - "Source/Mootools-External-Favicon.js"
