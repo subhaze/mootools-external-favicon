@@ -1,6 +1,9 @@
 Element.getFavicons
 ===========
 
+Update 5:
+This plugin now uses the data- attribute instead of the class attribute to define absolute links to alternate images.
+
 Update 4:
 Ability to specify the favicon image size. I've changed the way the favicon is displayed, it used to be set as the `<a>` background image
 but now that I'm seeing sites (ex. twitter) using larger favicons I felt that using an actual image tag would be best in order to keep all
@@ -52,7 +55,7 @@ HTML - Before favicon function is applied
 	<a href="http://www.twitter.com"></a><br />
 
 	<!-- overriding the default behavior by applying a specific location to get the favicon from -->
-	<a class="favicon[http://github.com/subhaze/mootools-external-favicon/raw/master/me.png]" href="http://github.com/subhaze">github.com/subhaze</a>
+	<a data-linkUrl="http://github.com/subhaze/mootools-external-favicon/raw/master/me.png" href="http://github.com/subhaze">github.com/subhaze</a>
 
 HTML - After favicon function is applied
 
@@ -73,7 +76,7 @@ HTML - After favicon function is applied
     <!-- overriding the default behavior by applying a specific location to get the favicon from -->
     <span class="favicon-wrapper">
         <img src="http://github.com/subhaze/mootools-external-favicon/raw/master/me.png" class="favicon-img">
-        <a class="favicon[http://github.com/subhaze/mootools-external-favicon/raw/master/me.png]" href="http://github.com/subhaze">github.com/subhaze</a>
+        <a data-linkUrl="http://github.com/subhaze/mootools-external-favicon/raw/master/me.png" href="http://github.com/subhaze">github.com/subhaze</a>
     </span>
 
 CSS
